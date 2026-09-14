@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: dreamstar-tv-activator
+    env: docker
+    plan: free
+    region: singapore
+    envVars:
+      - key: ADMIN_PASSWORD
+        value: StarAdmin999
+      - key: PORT
+        value: 10000
+    disk:
+      name: dreamstar-data
+      mountPath: /var/data
+      sizeGB: 1
